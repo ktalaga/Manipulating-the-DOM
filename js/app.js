@@ -1,8 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    const h1 = document.querySelector('h1');
-    h1.textContent = 'Is jv connected to DOM?';
+    const form = document.querySelector('#form');
+    form.addEventListener('submit', submitForm);
 });
+
+const submitForm = function(event) {
+    event.preventDefault();
+
+    
+}
 
 
 
