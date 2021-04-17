@@ -21,6 +21,8 @@ const submitForm = function(event) {
 
     const fightersList = document.querySelector('#fighters_list');
     fightersList.appendChild(fighterListElement);
+
+    event.target.reset();
 }
 
 const deleteAll = function() {

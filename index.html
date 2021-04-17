@@ -37,10 +37,24 @@
         </select>
     </div>
 
+    <div class="form_element">
+        <p>The last fight: </p>
+        <input type="radio" id="last_fig" name="last_fight" value="win">
+        <label for="win">Win</label>
+        <input type="radio" id="loss" name="last_fight" value="loss">
+        <label for="win">Loss</label>
+        <input type="radio" id="draw" name="last_fight" value="draw">
+        <label for="win">Draw</label>
+        <input type="radio" id="no_contest" name="last_fight" value="no_contest">
+        <label for="win">No Contest</label>
+    </div>
+
+
     <div id="buttons">
         <input type="submit" value="save"/>
         <input type="button" value="delete all" id="delete_all"/>
     </div>
+
 </form>
 <h1>Your MMA List</h1>
 <ul id="fighters_list"></ul>
