@@ -24,8 +24,6 @@ const submitForm = function(event) {
 }
 
 const deleteAll = function() {
-    const list = document.querySelectorAll('li')
-    for (const item of list){
-        item.remove();
-}
+    const fightersList = document.querySelector('#fighters_list');
+    fightersList.innerHTML = '';
 }
