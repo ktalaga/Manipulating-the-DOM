@@ -2,6 +2,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const form = document.querySelector('#form');
     form.addEventListener('submit', submitForm);
+
+    const delAll = document.querySelector('#delete_all');
+    delAll.addEventListener('click', deleteAll);
 });
 
 const submitForm = function(event) {
@@ -18,11 +21,11 @@ const submitForm = function(event) {
 
     const fightersList = document.querySelector('#fighters_list');
     fightersList.appendChild(fighterListElement);
-
-    
-    
-    
 }
 
-
-
+const deleteAll = function() {
+    const list = document.querySelectorAll('li')
+    for (const item of list){
+        item.remove();
+}
+}
