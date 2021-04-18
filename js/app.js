@@ -16,8 +16,14 @@ const submitForm = function(event) {
     let weight_class = document.querySelector('#weight_class');
     weight_class = weight_class.value;
 
+    let last_fight = document.querySelector('input[name="last_fight"]:checked');
+    last_fight = last_fight.value;
+    console.dir(last_fight);
+
+
+
     const fighterListElement = document.createElement('li');
-    fighterListElement.textContent = `Fighter: ${first_name} ${surname} Weight Class: ${weight_class}`;
+    fighterListElement.textContent = `Fighter: ${first_name} ${surname} Weight Class: ${weight_class} Last Fight: ${last_fight}`;
 
     const fightersList = document.querySelector('#fighters_list');
     fightersList.appendChild(fighterListElement);
