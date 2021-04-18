@@ -9,21 +9,21 @@
     <title>MMA Fighters List</title>
 </head>
 <body>
-<h1>MMA Fighters List</h1>
+<h1>Add Fighter</h1>
 <form id="form">
 
     <div class="form_element">
-    <label for="first_name">First Name: </label>
-    <input type="text" name="first_name" id="first_name" required>
+    <label for="first_name">First Name: </label><br>
+    <input type="text" name="first_name" id="first_name" class="text" required>
     </div>
 
     <div class="form_element">
-        <label for="surname">Surname: </label>
-        <input type="text" name="surname" id="surname" required>
+        <label for="surname">Surname: </label><br>
+        <input type="text" name="surname" id="surname" class="text" required>
     </div>
 
     <div class="form_element">
-        <label for="weight_class">Weight Class: </label>
+        <label for="weight_class">Weight Class: </label><br>
         <select name="weight_class" id="weight_class">
             <option value="" disabled selected></option>
             <option value="Flyweight">Flyweight</option>
@@ -37,26 +37,41 @@
         </select>
     </div>
 
-    <div class="form_element">
-        <p>The last fight: </p>
-        <input type="radio" class="radio_button" name="last_fight" value="Win">
-        <label for="win">Win</label>
-        <input type="radio" class="radio_button" name="last_fight" value="Loss">
-        <label for="loss">Loss</label>
-        <input type="radio" class="radio_button" name="last_fight" value="Draw">
-        <label for="draw">Draw</label>
-        <input type="radio" class="radio_button" name="last_fight" value="No contest">
-        <label for="no_contest">No Contest</label>
+    <div class="form_element_2">
+        <label for="last_fight">The last fight: </label><br>
+        <div>
+            <input type="radio" name="last_fight" value="Win">
+            <label for="win">Win</label>
+            <input type="radio" name="last_fight" value="Loss">
+            <label for="loss">Loss</label>
+            <input type="radio" name="last_fight" value="Draw">
+            <label for="draw">Draw</label>
+            <input type="radio" name="last_fight" value="No contest">
+            <label for="no_contest">No Contest</label>
+        </div>
     </div>
 
+    <div class="form_element_2">
+        <label for="organisation">Organisation: </label><br>
+        <div>
+            <input type="checkbox" name="organisation" value=" UFC">
+            <label for="UFC">UFC</label>
+            <input type="checkbox" name="organisation" value=" Bellator">
+            <label for="Bellator">Bellator</label>
+            <input type="checkbox" name="organisation" value=" Pride">
+            <label for="Pride">Pride</label>
+        </div>
+    </div>
 
     <div id="buttons">
-        <input type="submit" value="save"/>
+        <input type="submit" value="save"/><br>
         <input type="button" value="delete all" id="delete_all"/>
     </div>
 
 </form>
-<h1>Your MMA List</h1>
-<ul id="fighters_list"></ul>
+<h1>MMA Fighters List</h1>
+<ul id="fighters_list">
+    <div class="li"></div>
+</ul>
 </body>
 </html>

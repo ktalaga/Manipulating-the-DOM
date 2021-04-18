@@ -18,12 +18,15 @@ const submitForm = function(event) {
 
     let last_fight = document.querySelector('input[name="last_fight"]:checked');
     last_fight = last_fight.value;
-    console.dir(last_fight);
 
-
+    let organisations = document.querySelectorAll('input[name="organisation"]:checked');
+    let organisationsList = [];
+    organisations.forEach((organisation) => {
+        organisationsList.push(organisation.value)
+    })
 
     const fighterListElement = document.createElement('li');
-    fighterListElement.textContent = `Fighter: ${first_name} ${surname} Weight Class: ${weight_class} Last Fight: ${last_fight}`;
+    fighterListElement.textContent = `Fighter: ${first_name} ${surname} Weight Class: ${weight_class} Last Fight: ${last_fight} Organisations: ${organisationsList}`;
 
     const fightersList = document.querySelector('#fighters_list');
     fightersList.appendChild(fighterListElement);
